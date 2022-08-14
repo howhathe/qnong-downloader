@@ -7,7 +7,7 @@ This version is not conflicted with other mods. By that you can use qNong with a
 If you have any questions or have ideas for improving qNong, dms me on Discord "qDulfy#2655".
 
 <p align="center">
-  <img src="https://github.com/leginsoffi/nong-downloader/blob/main/.github/qNong.png" alt="idk">
+  <img src="https://github.com/leginsoffi/qnong-downloader/blob/main/.github/qNong.png" alt="idk">
 </p>
 
 > ## How to use
