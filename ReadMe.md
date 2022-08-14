@@ -30,8 +30,9 @@ If you see "qNong" window - congratulations.
 
 > ## Features
 
-- [x] Auto Song ID
+- [x] **Auto** Song ID
 - [x] **Delete** button
+- [x] **Don't** conflict with other mods.
 
 > ## ToDo
 
