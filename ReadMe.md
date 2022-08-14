@@ -30,10 +30,10 @@ If you see "qNong" window - congratulations.
 
 > ## Features
 
-- [x] **Auto** Song ID
-- [x] **Delete** button
-- [x] **Don't** conflict with other mods.
-- [x] **Download** songs to **Resources** folder (Not **%localappdata%**)
+- **Auto** Song ID
+- **Delete** button
+- **Don't** conflict with other mods.
+- **Download** songs to **Resources** folder (Not **%localappdata%**)
 
 > ## ToDo
 
