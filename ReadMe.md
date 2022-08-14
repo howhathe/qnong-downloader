@@ -1,4 +1,4 @@
-<h1 align="center">> NONG Downloader <</h1>
+<h1 align="center">> qNoNG Downloader 1.2 <</h1>
 
 This is just a port of [paroxysms](https://github.com/paroxysms/nong-downloader-extension/) version.
 
@@ -7,7 +7,7 @@ This version is not conflicted with other mods. By that you can use qNong with a
 If you have any questions or have ideas for improving qNong, dms me on Discord "qDulfy#2655".
 
 <p align="center">
-  <img src="https://github.com/leginsoffi/qnong-downloader/blob/main/.github/qNong.png" alt="idk">
+  <img src="https://github.com/leginsoffi/qnong-downloader/blob/main/.github/qNoNG.png" alt="idk">
 </p>
 
 > ## How to use
@@ -27,6 +27,11 @@ If you see "qNong" window - congratulations.
 3. Open project (In folder - Right Click > Open with Code)
 4. Select: x86 and set Release
 5. Press "BUILD" and open folder: "build/Release" and you see "qNong.dll"
+
+> ## Features
+
+- [x] Auto Song ID
+- [x] **Delete** button
 
 > ## ToDo
 
