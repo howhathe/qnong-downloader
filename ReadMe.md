@@ -33,6 +33,7 @@ If you see "qNong" window - congratulations.
 - [x] **Auto** Song ID
 - [x] **Delete** button
 - [x] **Don't** conflict with other mods.
+- [x] **Download** songs to **Resources** folder (Not **%localappdata%**)
 
 > ## ToDo
 
