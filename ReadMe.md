@@ -39,7 +39,7 @@ If you see "qNong" window - congratulations.
 
 - [ ] Installer
 - [x] YouTube support
-- [ ] SoundCloud support
+- [ ] Full youtube link support
 
 <h1 align="center">> Credits <</h1>
   
