@@ -1,4 +1,4 @@
-<h1 align="center">> qNoNG Downloader 1.2 <</h1>
+<h1 align="center">> qNoNG Downloader 1.3 <</h1>
 
 This is just a port of [paroxysms](https://github.com/paroxysms/nong-downloader-extension/) version.
 
@@ -12,7 +12,7 @@ If you have any questions or have ideas for improving qNong, dms me on Discord "
 
 > ## How to use
 
-1. Download DLL and components from [Releases](https://github.com/leginsoffi/nong-downloader/releases/tag/release/)
+1. Download DLL and components from [Releases](https://github.com/leginsoffi/qnong-downloader/releases/)
 2. Unzip to the Geometry Dash folder (With installed **Mega Hack v7**)
 3. Open Geometry Dash and press tab
 
