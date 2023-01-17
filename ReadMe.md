@@ -4,7 +4,7 @@ This is just a port of [paroxysms](https://github.com/paroxysms/nong-downloader-
 
 Now code in C++ and it works on MH7, lol.
 This version is not conflicted with other mods. By that you can use qNong with any mods :)
-If you have any questions or have ideas for improving qNong, dms me on Discord "qDulfy#2655".
+If you have any questions or have ideas for improving qNong, dms me on Discord "howhathe#7795".
 
 <p align="center">
   <img src="https://github.com/leginsoffi/qnong-downloader/blob/main/.github/qNoNG.png" alt="idk">
