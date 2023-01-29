@@ -2,12 +2,11 @@
 #include "nong.h"
 
 int idSong = 0, idAuto = 0, previousSong = 0;
-std::string youtubeLink = "";
-std::string audioQuality = "128k";
+std::string youtubeLink = "", audioQuality = "128k";
 const char *qualityList[] = { "128k\0", "192k\0", "256k\0", "320k\0" };
 
 bool __fastcall PlayLayer::initHook(gd::PlayLayer* self, int edx, gd::GJGameLevel* level) {
-	bool out = PlayLayer::init(self, level);
+    bool out = PlayLayer::init(self, level);
 
     idAuto = self->m_level->songID;
 
@@ -46,7 +45,8 @@ DWORD WINAPI mainThread(void* hModule) {
         else if (index == 2) audioQuality = "256k";
         else if (index == 3) audioQuality = "320k";
     });
-	qualityCombo->setValues(qualityList);
+	
+    qualityCombo->setValues(qualityList);
 
     Button* downloadSong  = Button::Create("Download");
 	downloadSong ->setCallback([](Button* a) {
@@ -54,8 +54,6 @@ DWORD WINAPI mainThread(void* hModule) {
             youtubeLink = youtubeLink.substr(32, 11);
         else if (youtubeLink.find("https://youtu.be/") != std::string::npos)
             youtubeLink = youtubeLink.substr(17, 11);
-        else if (youtubeLink.find("https://www.youtube.com/watch?v=") != std::string::npos)
-            youtubeLink = youtubeLink.substr(0, 11);
         else if (youtubeLink.find("https://www.youtube.com/watch?v=") != std::string::npos)
             youtubeLink = youtubeLink.substr(0, 11);
 
@@ -77,7 +75,7 @@ DWORD WINAPI mainThread(void* hModule) {
         }
     });
     
-	window->add(HorizontalLayout::Create(downloadSong, deleteSong));
+    window->add(HorizontalLayout::Create(downloadSong, deleteSong));
     window->add(qualityCombo);
     window->add(inputLink);
     window->add(HorizontalLayout::Create(inputIdSong, boxAutoidSong));
