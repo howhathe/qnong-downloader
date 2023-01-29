@@ -1,4 +1,4 @@
-<h1 align="center">> qNoNG Downloader 1.3 <</h1>
+<h1 align="center"> > qNoNG Downloader 1.3 < </h1>
 
 This is just a port of [paroxysms](https://github.com/paroxysms/nong-downloader-extension/) version.
 
@@ -18,7 +18,7 @@ If you have any questions or have ideas for improving qNong, dms me on Discord "
 
 If you see "qNong" window - congratulations.
 1. First line: **Song ID**
-2. Second line: **YouTube link** (Not full link, just enter last symbols. Example: vhWn79dSFqc)
+2. Second line: **YouTube link** (Example: vhWn79dSFqc / https://www.youtube.com/watch?v=vhWn79dSFqc / https://youtu.be/vhWn79dSFqc)
 
 > ## How to compile
 
@@ -33,7 +33,9 @@ If you see "qNong" window - congratulations.
 - **Auto** Song ID
 - **Delete** button
 - **Don't** conflict with other mods.
-- **Download** songs to **Resources** folder (Not **%localappdata%**)
+- **Download** song's to **Resources** folder (Not **%localappdata%**)
+- **CtrlV** work
+- **Full** YouTube links!
 
 > ## ToDo
 
@@ -41,7 +43,8 @@ If you see "qNong" window - congratulations.
 - [x] YouTube support
 - [x] Full youtube link support
 
-<h1 align="center">> Credits <</h1>
+<h1 align="center"> > Credits < </h1>
   
 [paroxysms](https://github.com/paroxysms/) & [TobyAdd](https://github.com/TobyAdd/)
-"# qNong" 
+
+<p align="center">> thx. < </p>
