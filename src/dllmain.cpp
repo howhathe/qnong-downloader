@@ -6,11 +6,9 @@ std::string youtubeLink = "", audioQuality = "128k";
 const char *qualityList[] = { "128k\0", "192k\0", "256k\0", "320k\0" };
 
 bool __fastcall PlayLayer::initHook(gd::PlayLayer* self, int edx, gd::GJGameLevel* level) {
-    bool out = PlayLayer::init(self, level);
-
     idAuto = self->m_level->songID;
 
-    return out;
+    return init(self, level);
 }
 
 DWORD WINAPI mainThread(void* hModule) {
