@@ -1,4 +1,3 @@
-
 #include "nong.h"
 
 int idSong = 0, idAuto = 0, previousSong = 0;
@@ -7,14 +6,22 @@ const char *qualityList[] = { "128k\0", "192k\0", "256k\0", "320k\0" };
 
 bool __fastcall PlayLayer::initHook(gd::PlayLayer* self, int edx, gd::GJGameLevel* level) {
     idAuto = self->m_level->songID;
-
     return init(self, level);
 }
 
 DWORD WINAPI mainThread(void* hModule) {
     using namespace MegaHackExt;
-
     Window* window = Window::Create("qNoNG | 1.3");
+
+    if (MH_Initialize() == MH_OK) {
+        MH_CreateHook(
+            (PVOID)(gd::base + 0x01FB780),
+            PlayLayer::initHook,
+            (LPVOID*)&PlayLayer::init
+        );
+
+        MH_EnableHook(MH_ALL_HOOKS);
+    }
 
     TextBox* inputIdSong = TextBox::Create("Song ID"); auto idSongstr = std::to_string(idSong); inputIdSong->set(idSongstr.c_str());
     inputIdSong->setCallback([](TextBox* a, const char* Slider) {
@@ -74,41 +81,19 @@ DWORD WINAPI mainThread(void* hModule) {
     });
     
     window->add(HorizontalLayout::Create(downloadSong, deleteSong));
-    window->add(qualityCombo);
-    window->add(inputLink);
+    window->add(qualityCombo); window->add(inputLink);
     window->add(HorizontalLayout::Create(inputIdSong, boxAutoidSong));
-
     Client::commit(window);
 
-    return TRUE;
+    return 1;
 }
 
-void MinHook_Setup() {
-    MH_CreateHook(
-        (PVOID)(gd::base + 0x01FB780),
-        PlayLayer::initHook,
-        (LPVOID*)&PlayLayer::init
-    );
-}
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpvReserved ) {
+    if (dwReason != DLL_PROCESS_ATTACH) return 0;
+    
+    auto mThread = CreateThread(0, 0, mainThread, hModule, 0, 0);
+    if (mThread) CloseHandle(mThread);
+    else return 0;
 
-BOOL APIENTRY DllMain(HMODULE hModule,
-    DWORD  ul_reason_for_call,
-    LPVOID lpReserved
-)
-{
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-        if (MH_Initialize() == MH_OK) {
-            MinHook_Setup();
-            MH_EnableHook(MH_ALL_HOOKS);
-        }
-
-        CreateThread(0, 0x1000, mainThread, hModule, 0, 0);
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
+    return 1;
 }
